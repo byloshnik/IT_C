@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson_2</title>
+     <link href="bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+<style type="text/css">
+.album {
+  display: inline-block;
+  position: relative;
+  height: 300px;
+  width: 900px;
+}
+.poster {
+  position: relative;
+  height: 157.5%;
+}
+.poster img {
+  width: 100%;
+}
+
+.songs {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  opacity: 0;
+  cursor: pointer;
+  transition: 2s;
+}
+
+.songs-title {
+  color: #fff;
+  text-align: center;
+
+}
+
+.album:hover .songs {
+  opacity: 1;
+  transition: 3s;
+}
+
+.album:hover .poster:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .7);
+
+}
+
+
+ </style>
+</head>
+<body>
+<div>
+        <b>Lesson_2</b>
+        </div>
+
+
+<div class="album">
+  <div class="poster">
+    <img src="../static/images/2.1.svg" alt="" />
+  </div>
+  <div class="songs">
+    <h2 class="songs-title">Title efwfw wef wef ewf wef wef </h2>
+  </div>
+</div>
+            <div style=">
+                text-align :center;">
+                <div><a class="gradient-btn" href="/" >Back</a></div></div>
+</body>
+</html>

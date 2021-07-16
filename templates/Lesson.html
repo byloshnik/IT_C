@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block Lesson %}{% endblock %}</title>
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+    <style type="text/css">
+    </style>
+</head>
+<body>
+{% block Lesson_body %}{% endblock %}
+    <div style = "
+    font-size: 90px;
+    text-align: center;
+    color: #4682B4;
+    text-decoration:none;
+    text-tranform: uppercase;
+    letter-spacing: 2px;
+    font-family: Arial;
+    border-radius: 20px;
+    margin-bottom: 50px;">
+    </div>
+    <div style = "
+    font-size: 90px;
+    text-align: center;
+    color: #4682B4;
+    text-decoration:none;
+    text-tranform: uppercase;
+    letter-spacing: 2px;
+    font-family: Arial;
+    border-radius: 20px;
+    margin-bottom: 50px;">
+        <b>My first work</b>
+    </div>
+            <div style=">
+                text-align :center;">
+
+                    <div><a class="gradient-btn" href="/Lesson_1" >Lesson_1<br>переход к уроку</a></div>
+
+                    <div><a class="gradient-btn" href="/Lesson_2" >Lesson_2<br>переход к уроку</a></div>
+
+                    <div><a class="gradient-btn" href="/Lesson_3" >Lesson_3<br>переход к уроку</a></div>
+                </div>
+</body>
+</html>

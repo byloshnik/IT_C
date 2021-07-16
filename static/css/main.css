@@ -1,0 +1,65 @@
+table.center {
+    margin-left: auto;
+    margin-right: auto;
+    }
+    .point {
+    border: 2px solid #4682B4;
+    width : 30%;
+    text-align :center;
+    color: #4682B4;
+    text-decoration:none;
+    text-tranform: uppercase;
+    letter-spacing: 2px;
+    font-family: Arial;
+    border-radius: 20px;
+    }
+    .scale  {
+            width:100% ;
+            height: 25% ;
+            vspace: 30px ;
+            display: inline-block;
+            overflow: hidden;
+    }
+    .scale img {
+    transition: 0.5s;
+    display: block;
+    }
+    .scale img:hover {
+    transform: scale(1.2);
+    }
+
+
+body{
+    background: #d6eaf8;
+    font-size: 90px;
+    text-align: center;
+    color: #4682B4;
+    text-decoration:none;
+    text-tranform: uppercase;
+    letter-spacing: 2px;
+    font-family: Arial;
+    border-radius: 20px;
+    margin-bottom: 50px;
+    }
+.font.Lesson_1{font-size: 30px;
+}
+    .gradient-btn {
+    text-decoration:none;
+    font-size: 18px;
+    display: inline-block;
+    color: white;
+    padding: 10px 30px;
+    margin: 400px 200px;
+    border-radius: 80px;
+    font-family: Arial;
+    text-tranform: uppercase;
+    letter-spacing: 2px;
+    background-image: linear-gradient(to right, #ADD8E6 0%, #4682B4 51%, #ADD8E6 100%);
+    background-size: 200% auto;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    transition: .5s;
+    }
+    .gradient-btn:hover {
+    background-position: right center;
+    }
+
