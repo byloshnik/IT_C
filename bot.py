@@ -73,22 +73,19 @@ async def process_email(msg: types.Message):
     @dp.message_handler(content_types=['text'])
     async def handle_text(message: Message):
             user_email = f'{message.text}'
-            print(user_email)
+            #print(user_email)
             connect = sqlite3.connect('db_students.db')
             cursor = connect.cursor()
             user_id = f'{message.chat.id}'
-            cursor.execute(f'SELECT rate FROM Students WHERE id = {user_id}')
-            connect.commit()
+            cursor.execute(f'SELECT rate FROM Students WHERE id = "{user_id}"')
             rate = cursor.fetchone()
             print(rate)
-            cursor.execute(f'UPDATE Students SET rate = {user_email} WHERE id = {user_id}')
-            connect.commit()
-            if type(rate) == tuple and rate != rate:
-                  cursor.execute(f'UPDATE Students SET rate = {user_email} WHERE id = {user_id}')
+            if rate[0] != user_email:
+                  cursor.execute(f'UPDATE Students SET rate = "{user_email}" WHERE id = "{user_id}"')
                   connect.commit()
                   await message.answer(f'{message.chat.username}, Ваша почта внесена в базу!')
-            elif rate == rate:
-                  await message.answer(f'{message.chat.username}, Ваша почта уже указана')
+            elif rate[0] == user_email:
+                  await message.answer(f'{message.chat.username}, Эта почта уже используется')
 
 if __name__ == '__main__':
     executor.start_polling(dp)
