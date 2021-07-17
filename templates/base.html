@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <style type="text/css">
+    table {
+    margin-left: 5%;
+    margin-right: auto;
+    margin-bottom: 50px;
+    border: 2px solid #4682B4;
+    border-radius: 10px;
+    width: 1500px;
+    border-collapse: collapse;
+    border-radius: 10px;
+    border-style: hidden;
+    box-shadow: 0 0 0 3px #4682B4;
+    }
+    td {
+    text-align :center;
+    padding: auto;
+    margin-left: 50%;
+    margin-right: auto;
+    width: auto;
+    border: 1px solid #4682B4;
+    line-height: .8;
+    }
+
+    body{
+    color: #4682B4;
+    letter-spacing: 1px;
+    font-family: Arial;
+    background: #d6eaf8;
+    }
+    .gradient-btn {
+    text-decoration:none;
+    display: inline-block;
+    color: white;
+    padding: 10px 30px;
+    margin: 10px 20px;
+    border-radius: 30px;
+    font-family: Arial;
+    text-tranform: uppercase;
+    letter-spacing: 2px;
+    background-image: linear-gradient(to right, #ADD8E6 0%, #4682B4 51%, #ADD8E6 100%);
+    background-size: 200% auto;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    transition: .5s;
+    }
+    .gradient-btn:hover {
+    background-position: right center;
+    }
+    </style>
+<title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+<h1><b>Админка</b></h1>
+{% block body %}{% endblock %}
+<footer>
+</footer>
+</body>
+
+
+
