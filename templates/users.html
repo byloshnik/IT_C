@@ -1,10 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Users</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% block title %}
+Все пользователи бота
+{% endblock %}
+{% block body %}
+<div class="container mt-5">
 
-</body>
-</html>
+<table class="center">
+<caption><h2>Все пользователи чат-бота</h2></caption>
+<th>айди пользователя</th><th>никнейм</th><th>почта</th><th>заинтересованность</th><th>действие</th><tr class="point"></tr>
+    {% for el in botinfo %}
+    <tr>
+    <td><p><b>{% print(el[0]) %}</b></p></td>
+    <td><p><b>{% print(el[1]) %}</b></p></td>
+    <td><p><b>{% print(el[2]) %}</b></p></td>
+    <td><p><b>{% print(el[3]) %}</b></p></td>
+    <td><div><a class="gradient-btn" href="" >Удалить пользователя</a></div>
+        <div><a class="gradient-btn" href="" >Отправить приглашение</a></div></td>
+            </tr>
+
+{% endfor %}
+</table>
+<div><a class="gradient-btn" href="/" >Back</a></div></td>
+</div>
+{% endblock %}

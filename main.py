@@ -1,5 +1,5 @@
 from flask import Flask, render_template, url_for
-
+import sqlite3
 
 app = Flask(__name__)
 
@@ -25,8 +25,8 @@ def Lesson_3():
 
 @app.route('/users')
 def user():
-    content = sqlite3.connect('db_students.db')
-    cursor = conn.cursor()
+    connect = sqlite3.connect('db_students.db')
+    cursor = connect.cursor()
     cursor.execute(f'SELECT * FROM Students')
     botinfo = cursor.fetchall()
     print(botinfo)
